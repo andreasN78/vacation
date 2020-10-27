@@ -19,6 +19,7 @@ $conn->close()
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 	<title>Login V1</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -68,8 +69,46 @@ $conn->close()
 							<i class="fa fa-lock" aria-hidden="true"></i>
 						</span>
 					</div>
-					
-					<div class="container-login100-form-btn">
+
+                    <input type="button" class="btn btn-info" value="Admin Login" onclick=" relocate_home()">
+
+                    <script>
+                        function relocate_home()
+                        {
+                            location.href = "Admin.php";
+                        }
+                    </script>
+
+
+
+
+
+
+                    <!--
+                   <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            User Type
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#"><h6> Employee</h6></a>
+                            <a class="dropdown-item" href="#"><h6>Administrator</h6></a>
+
+                        </div>
+                    </div>
+					-->
+                    <!-- Input for employee + Admin
+                    <div class="wrap-input100 validate-input" data-validate = "Valid User type is required: ex@Employee/Admin">
+                        <input class="input100" type="text" name="user_type" placeholder=" type Employee/Admin">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+                    </div>
+                    	-->
+
+
+
+                    <div class="container-login100-form-btn">
 						<input type="submit" class="login100-form-btn">
 					</div>
 
@@ -84,8 +123,6 @@ $conn->close()
 			</div>
 		</div>
 	</div>
-	
-	
 
 	
 <!--===============================================================================================-->	
@@ -107,3 +144,4 @@ $conn->close()
 
 </body>
 </html>
+

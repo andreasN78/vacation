@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00c8a721-e3aa-419a-9307-c7a276087c9c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/epignosisPhp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/epignosisPhp.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/table/adminCreateUser.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/table/adminShowForm.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/table/application.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/table/application.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login.php" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,7 +15,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" doNotAsk="true">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <executable />
@@ -88,7 +89,9 @@
       <workItem from="1603444463737" duration="10097000" />
       <workItem from="1603523025186" duration="19441000" />
       <workItem from="1603616380318" duration="15981000" />
-      <workItem from="1603706380213" duration="11526000" />
+      <workItem from="1603706380213" duration="11804000" />
+      <workItem from="1603786540316" duration="4910000" />
+      <workItem from="1603814157586" duration="3775000" />
     </task>
     <task id="LOCAL-00001" summary="login">
       <created>1603532096880</created>
@@ -125,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603662895547</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="php mail configuration on application.php">
+      <created>1603748538530</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1603748538530</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,6 +188,7 @@
     <MESSAGE value="login" />
     <MESSAGE value="bootstrap forms and DB" />
     <MESSAGE value="application form and database update" />
-    <option name="LAST_COMMIT_MESSAGE" value="application form and database update" />
+    <MESSAGE value="php mail configuration on application.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="php mail configuration on application.php" />
   </component>
 </project>
