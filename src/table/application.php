@@ -25,7 +25,87 @@ $sql1 = " INSERT INTO Application (date_Submitted,vacation_Start,vacation_End,re
 $result = mysqli_query($conn, $sql1);
 $sql2 = " UPDATE Application SET days_Requested =DATEDIFF(vacation_End,vacation_Start)+1 ";
 $result2 = mysqli_query($conn, $sql2);
-echo "<script>window.location = 'index2.php'</script>";
+//echo "<script>window.location = 'index2.php'</script>";
+
+require_once  'phpmailer/class.phpmailer.php';
+$mail=new PHPMailer(true);
+$mailId=$emailUser;
+$subject="Application for Vacations";
+$appliMessage="​Dear supervisor, employee"  . $emailUser . "requested for some time off, starting on" . $dateStart . "and ending on" .  $dateEnd .  "stating the reason:" . $areason . "Click on one of the below links to approve or reject the application: {approve_link} - {reject_link}​”";
+$adminMessage="Dear employee, your supervisor has accepted your application submitted on" . $currentDate . ".";
+try
+{
+    $mail->IsSMTP();
+    $mail->isHTML(true);
+    $mail->SMTPDebug = 0;
+    $mail->SMTPAuth = true;
+    $mail->SMTPSecure = "ssl";
+    $mail->Host = "smtp.gmail.com";
+    $mail->Port = '465';
+    $mail->AddAddress($mailId);
+    $mail->Username ="andrew78984@gmail.com";
+    $mail->Password ="apass!4321";
+    $mail->SetFrom('andrew78984@gmail.com','Antreas');
+    $mail->AddReplyTo("andrew78984@gmail.com","Antreas");
+    $mail->Subject = $subject;
+    $mail->Body = $appliMessage;
+    $mail->AltBody = $appliMessage;
+    if($mail->Send())
+    {
+        echo "Thank you for register u got a notification through the mail you provide";
+    }
+}
+catch(phpmailerException $ex)
+{
+    $msg = "
+".$ex->errorMessage()."
+";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //include PHPMailerAutoload.php
 //create an instance of PHPMailer
 /*
