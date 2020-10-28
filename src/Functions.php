@@ -12,7 +12,8 @@ function login($username, $password, $conn)
         $row = $result->fetch_assoc();
         // echo "id: " . $row["id"] . " - Name: " . $row["AdminUserName"] . "<br> " . $row["AdminPassword"] . "<br>";
         //var_dump($row);
-        if (md5($password) === $row["user_Password"]) {
+        $hashedPassword=hash('sha512',$password);
+        if (($hashedPassword) === $row["user_Password"]) {
             return "Success";
         } else {
             return 'Invalid password.';

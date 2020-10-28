@@ -10,7 +10,7 @@ $currentDate= date("Y-m-d");
 $dateStart=$_POST['startDate'];
 $dateEnd=$_POST['endDate'];
 $emailUser=$_POST['email'];
-$areason=$_POST['reason'];
+$areason=mysqli_real_escape_string($conn,$_POST['reason']);
 /*var_dump($dateFrom);
 var_dump($dateEnd);
 var_dump($emailUser);

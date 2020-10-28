@@ -2,8 +2,15 @@
 
 include 'Functions.php';
 include 'connection.php';
-
-if (isset($_POST['username'])) {
+$username=stripcslashes($_POST['username']);
+//var_dump($username);
+$sql1="SELECT * FROM User WHERE user_Email = '$username' AND user_Type='Employee'";
+$result = mysqli_query($conn,$sql1);
+//var_dump($result);
+$matchFound = mysqli_num_rows($result) > 0 ? 'yes' : 'no';
+//var_dump($matchFound);
+//echo $matchFound;
+if ((isset($_POST['username'])) && ($matchFound == 'no') )  {
     //καλουμε την συναρτηση login me ta post username kai password
     $message = login($_POST['username'], $_POST['password'], $conn);
     echo $message;
@@ -12,6 +19,10 @@ if (isset($_POST['username'])) {
         session_start();
         $_SESSION["usernameStored"] = $_POST['username'];
     }
+}
+elseif ($matchFound=='yes') { //then the user is employee so i force him to Employee login
+    echo "<script>window.location = 'index.php'</script>";
+
 }
 $conn->close()
 
