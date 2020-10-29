@@ -32,7 +32,14 @@
 
         <div class="col-xl-8 offset-xl-2 py-5">
 
+            <?php if ($newUser):?>
             <h1>Create New User </h1>
+            <?php else:?>
+            <h1>Edit User </h1>
+            <?php endif;?>
+
+
+
 
             <p class="lead">In the following form complete the User personal information.</p>
 
@@ -47,14 +54,14 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="user_Firstname">Firstname *</label>
-                                <input id="user_Firstname" type="text" name="user_Firstname" class="form-control" placeholder="Please enter user First Name" required="required" data-error="Date From is required.">
+                                <input id="user_Firstname" value="<?php echo $user['user_Firstname']?>" type="text" name="user_Firstname" class="form-control" placeholder="Please enter user First Name" required="required" data-error="Date From is required.">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="user_Lastname">LastName *</label>
-                                <input id="user_Lastname" type="text" name="user_Lastname" class="form-control" placeholder="Please enter user LastName" required="required" data-error="Lastname is required.">
+                                <input id="user_Lastname" value="<?php echo $user['user_Firstname']?>" type="text" name="user_Lastname" class="form-control" placeholder="Please enter user LastName" required="required" data-error="Lastname is required.">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
@@ -63,7 +70,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="form_email">Email *</label>
-                                <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter user email *" required="required" data-error="Valid email is required.">
+                                <input id="form_email"  value="<?= $user['user_Email']?>" type="email" name="email" class="form-control" placeholder="Please enter user email *" required="required" data-error="Valid email is required.">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
@@ -93,13 +100,14 @@
                     </div>
 
 
+
                     <form action="createUser.php" method="post">
 
                     <div class="dropdown" >
 
                         <select class="form-control" name="theUserChoices">
-                            <option value="Employee">Employee</option>
-                            <option value="Administrator">Administrator</option>
+                            <option value="Employee" <?php echo $user['user_Type'] == 'Employee' ? 'selected' : ''?>>Employee</option>
+                            <option value="Administrator" <?php echo $user['user_Type'] == 'Administrator' ? 'selected' : ''?>>Administrator</option>
 
                         </select>
 

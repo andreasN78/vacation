@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00c8a721-e3aa-419a-9307-c7a276087c9c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/table/user_properties.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/table/adminShowForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/table/adminShowForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/table/adminShowForm.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/table/application.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/table/application.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/table/createUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/table/createUserForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/table/createUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/table/createUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/table/user_properties.php" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,6 +49,7 @@
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="PHP" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
   </component>
   <component name="RunDashboard">
@@ -93,7 +97,8 @@
       <workItem from="1603786540316" duration="4910000" />
       <workItem from="1603814157586" duration="15237000" />
       <workItem from="1603880008580" duration="8461000" />
-      <workItem from="1603899257764" duration="14996000" />
+      <workItem from="1603899257764" duration="15166000" />
+      <workItem from="1603959895742" duration="21779000" />
     </task>
     <task id="LOCAL-00001" summary="login">
       <created>1603532096880</created>
@@ -158,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603887956916</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="edit operations adminShowForm.php">
+      <created>1603926552610</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1603926552610</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,6 +227,7 @@
     <MESSAGE value="Admin.php +adminShowForm.php+adminCreateUser.php" />
     <MESSAGE value="Admin.php +adminShowForm.php+adminCreateUser.php improvements" />
     <MESSAGE value="testing some cases-generally improvements" />
-    <option name="LAST_COMMIT_MESSAGE" value="testing some cases-generally improvements" />
+    <MESSAGE value="edit operations adminShowForm.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit operations adminShowForm.php" />
   </component>
 </project>

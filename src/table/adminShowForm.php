@@ -26,9 +26,59 @@
     <!--===============================================================================================-->
 </head>
 <body>
+<!-- Modal -->
+<div class="modal fade" id="editmodal" tableindex="-1" role=""dialog" aria-labelledby="exampleModalLabel"aria-hidden="true">
+    <div class ="modal-dialog" role=""document">
+        <div class ="modal-content">
+            <div class=""modal-header">
+                <h5 class ="modal-title" id ="exampleModalLabel"> Update User Data</h5>
+                <button type="button" class="close" data-dismiss=""modal" aria-label ="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+
+
+</div>
+
+    <form action="user_properties.php" method="POST">
+        <div class ="modal-body">
+            <div class="form-group">
+                <label>First Name</label>
+                <input type="text" name="fname " class="form-control" placeholder="Enter First Name">
+
+
+            </div>
+            <div class ="form-group">
+                <label> Last Name    </label>
+                <input type="text" name="fname" class ="form-control" placeholder ="Enter Last Name">
+
+            </div>
+
+        <div class=""modal-footer">
+
+         <button type="button" class ="btn btn-secondary" data-dismiss="modal"> Close</button>
+            <button type="submit"  name ="insertdata" class ="btn btn-primary" data-dismiss="modal"> Close</button>
+
+        </div>
+
+
+
+
+
+    </form>
+
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
 
 <div class="centerThis">
-    <a class="thisButton" href="createUser.html" >Create New User</a>
+    <a class="thisButton" href="createUser.php" >Create New User</a>
 </div>
 
 <div class="limiter">
@@ -53,18 +103,18 @@
                 <div class="table100-body js-pscroll ps ps--active-y">
                     <table>
                         <tbody>
-                            <?php
-                            include '../connection.php';
-                            if ($conn->connect_error) {
-                                die("Connection failed: " . $conn->connect_error);
-                            }
+                        <?php
+                        include '../connection.php';
+                        if ($conn->connect_error) {
+                            die("Connection failed: " . $conn->connect_error);
+                        }
 
 
-                            $sql2 = "SELECT user_Firstname,user_Lastname,user_Email,user_Type FROM User ORDER BY user_Firstname ";
-                            $resultForm2=mysqli_query($conn,$sql2);
+                        $sql2 = "SELECT user_Firstname,user_Lastname,user_Email,user_Type FROM User ORDER BY user_Firstname ";
+                        $resultForm2=mysqli_query($conn,$sql2);
 
-                            while ($row = mysqli_fetch_array($resultForm2)) {
-                                echo "<tr class='row100 body'>
+                        while ($row = mysqli_fetch_array($resultForm2)) {
+                            echo "<tr class='row100 body'>
                                         <td class='cell100 column1'>" . $row[0] . "</td>
                                         <td class='cell100 column2'>" . $row[1] . "</td>
                                         
@@ -72,12 +122,12 @@
                                         <td class='cell100 column4'>" . $row[3] . "</td>
                                         <td class='cell100 column5'> 
                                             <div class=\"text-right\"> 
-                                            <button class='btn btn-primary badge-pill'> Edit </button></td>
+                                            <a class='btn btn-success editbtn' href='createUser.php?email=$row[2]'> Edit </a></td>
                                               </div> 
                                      
                                       </tr>";
-                            }
-                            ?>
+                        }
+                        ?>
                         </tbody>
                     </table>
                 </div>
@@ -109,8 +159,27 @@
 
 
 </script>
+
+<script>
+
+$(document).ready(function () {
+    $('.editbtn').on('click',function () {
+        $(#'editmodal').modal('show');
+
+    });
+
+});
+
+</script>
+
+
+
+
+
 <!--===============================================================================================-->
 <script src="js/main.js"></script>
+<script src="adminShowForm.js"></script>
+
 
 </body>
 </html>

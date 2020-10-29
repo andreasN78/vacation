@@ -25,9 +25,9 @@ $sql1 = " INSERT INTO Application (date_Submitted,vacation_Start,vacation_End,re
 $result = mysqli_query($conn, $sql1);
 $sql2 = " UPDATE Application SET days_Requested =DATEDIFF(vacation_End,vacation_Start)+1 ";
 $result2 = mysqli_query($conn, $sql2);
-//echo "<script>window.location = 'index2.php'</script>";
+echo "<script>window.location = 'index2.php'</script>";
 
-require_once  'phpmailer/class.phpmailer.php';
+/*require_once  'phpmailer/class.phpmailer.php';
 $mail=new PHPMailer(true);
 $mailId=$emailUser;
 $subject="Application for Vacations";
@@ -61,7 +61,7 @@ catch(phpmailerException $ex)
 ".$ex->errorMessage()."
 ";
 }
-
+*/
 
 
 
