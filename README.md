@@ -23,3 +23,6 @@ You can use Jetbrains phpStorm or vsCode
 In order to use database you have to install phpMyAdmin and browse database file from   Project/DB/vacation.sql 
 
 Then you can start the server
+![1](https://user-images.githubusercontent.com/45739821/126291751-7496bd91-17a3-45b8-88bd-3edc1b2ee435.png)
+![2](https://user-images.githubusercontent.com/45739821/126291770-e23b3321-a512-4c9b-bef5-b1724a7b6b98.png)
+![Screenshot_20201024_234108](https://user-images.githubusercontent.com/45739821/126291801-32ac4047-1b87-45f9-97e5-b41be4fb0ff0.png)
