@@ -1,8 +1,8 @@
 <?php
 
 $servername = "localhost";
-$usernameDb = "root2";
-$passwordDb = "1234";
+$usernameDb = "";
+$passwordDb = "";
 $db = 'vacation';
 
 // Create connection
